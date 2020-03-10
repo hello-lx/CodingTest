@@ -1,4 +1,5 @@
 #include <vector>
+#include <math.h>
 #include <algorithm>
 using namespace std;
 
@@ -20,8 +21,6 @@ public:
         vector<int> ar;
     	vector<vector<int>> arr;
     	int maxSqrt = getMaxSqrt(n);
-    	int sum = 0;
-    	int  j = 0;
     	int MaxSqrt = maxSqrt;
     	for(int i = maxSqrt; i > 0; i--)
     	{
@@ -41,6 +40,6 @@ public:
     	for(int i=0; i<arr.size(); i++)
     	    if(arr[i].size() < maxSize) maxSize = arr[i].size();
 	    
-	    return maxSize;
+        return maxSize;
     }
 };

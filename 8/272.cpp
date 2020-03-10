@@ -1,5 +1,6 @@
 #include <iostream>
-#include <>
+#include <vector>
+#include <string>
 using namespace std;
 
 class Solution {
@@ -18,7 +19,7 @@ public:
         {
             for ( int i=3; i <= n; i++) {
                 /* code */
-            result.push_back(result[i-1]+result[i-2]+result[i-3]);
+                result.push_back(result[i-1]+result[i-2]+result[i-3]);
             }
             return result[n];
         }
