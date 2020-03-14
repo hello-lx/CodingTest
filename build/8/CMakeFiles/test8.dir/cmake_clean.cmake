@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test8.dir/272.cpp.o"
   "CMakeFiles/test8.dir/513.cpp.o"
   "CMakeFiles/test8.dir/602.cpp.o"
+  "CMakeFiles/test8.dir/603.cpp.o"
+  "CMakeFiles/test8.dir/622.cpp.o"
   "libtest8.pdb"
   "libtest8.so"
 )

@@ -422,6 +422,60 @@ test8/fast:
 	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/602.cpp.s
 .PHONY : 602.cpp.s
 
+603.o: 603.cpp.o
+
+.PHONY : 603.o
+
+# target to build an object file
+603.cpp.o:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/603.cpp.o
+.PHONY : 603.cpp.o
+
+603.i: 603.cpp.i
+
+.PHONY : 603.i
+
+# target to preprocess a source file
+603.cpp.i:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/603.cpp.i
+.PHONY : 603.cpp.i
+
+603.s: 603.cpp.s
+
+.PHONY : 603.s
+
+# target to generate assembly for a file
+603.cpp.s:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/603.cpp.s
+.PHONY : 603.cpp.s
+
+622.o: 622.cpp.o
+
+.PHONY : 622.o
+
+# target to build an object file
+622.cpp.o:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/622.cpp.o
+.PHONY : 622.cpp.o
+
+622.i: 622.cpp.i
+
+.PHONY : 622.i
+
+# target to preprocess a source file
+622.cpp.i:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/622.cpp.i
+.PHONY : 622.cpp.i
+
+622.s: 622.cpp.s
+
+.PHONY : 622.s
+
+# target to generate assembly for a file
+622.cpp.s:
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build && $(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/622.cpp.s
+.PHONY : 622.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -464,6 +518,12 @@ help:
 	@echo "... 602.o"
 	@echo "... 602.i"
 	@echo "... 602.s"
+	@echo "... 603.o"
+	@echo "... 603.i"
+	@echo "... 603.s"
+	@echo "... 622.o"
+	@echo "... 622.i"
+	@echo "... 622.s"
 .PHONY : help
 
 

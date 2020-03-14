@@ -15,6 +15,7 @@ public:
     bool canCross(vector<int> &stones) {
         // write your code here
         int len = stones.size();
+        // m = {k1: [], k2: [], ...}
         map<int, set<int>> m;//存放可以到达的位置以及由哪一位置到达现在的位置
         m[1].insert(0);
         for (int i = 1; i < len; ++i)

@@ -188,6 +188,9 @@ CodingTest_BINARY_DIR:STATIC=/home/yuan/XSpace/Study/Interviewers/CodingTest/bui
 CodingTest_SOURCE_DIR:STATIC=/home/yuan/XSpace/Study/Interviewers/CodingTest
 
 //Dependencies for target
+test7_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 test8_LIB_DEPENDS:STATIC=
 
 

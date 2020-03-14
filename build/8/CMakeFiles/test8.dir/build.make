@@ -321,6 +321,54 @@ include 8/CMakeFiles/test8.dir/flags.make
 8/CMakeFiles/test8.dir/602.cpp.o.provides.build: 8/CMakeFiles/test8.dir/602.cpp.o
 
 
+8/CMakeFiles/test8.dir/603.cpp.o: 8/CMakeFiles/test8.dir/flags.make
+8/CMakeFiles/test8.dir/603.cpp.o: ../8/603.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuan/XSpace/Study/Interviewers/CodingTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object 8/CMakeFiles/test8.dir/603.cpp.o"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test8.dir/603.cpp.o -c /home/yuan/XSpace/Study/Interviewers/CodingTest/8/603.cpp
+
+8/CMakeFiles/test8.dir/603.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test8.dir/603.cpp.i"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuan/XSpace/Study/Interviewers/CodingTest/8/603.cpp > CMakeFiles/test8.dir/603.cpp.i
+
+8/CMakeFiles/test8.dir/603.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test8.dir/603.cpp.s"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuan/XSpace/Study/Interviewers/CodingTest/8/603.cpp -o CMakeFiles/test8.dir/603.cpp.s
+
+8/CMakeFiles/test8.dir/603.cpp.o.requires:
+
+.PHONY : 8/CMakeFiles/test8.dir/603.cpp.o.requires
+
+8/CMakeFiles/test8.dir/603.cpp.o.provides: 8/CMakeFiles/test8.dir/603.cpp.o.requires
+	$(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/603.cpp.o.provides.build
+.PHONY : 8/CMakeFiles/test8.dir/603.cpp.o.provides
+
+8/CMakeFiles/test8.dir/603.cpp.o.provides.build: 8/CMakeFiles/test8.dir/603.cpp.o
+
+
+8/CMakeFiles/test8.dir/622.cpp.o: 8/CMakeFiles/test8.dir/flags.make
+8/CMakeFiles/test8.dir/622.cpp.o: ../8/622.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuan/XSpace/Study/Interviewers/CodingTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object 8/CMakeFiles/test8.dir/622.cpp.o"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test8.dir/622.cpp.o -c /home/yuan/XSpace/Study/Interviewers/CodingTest/8/622.cpp
+
+8/CMakeFiles/test8.dir/622.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test8.dir/622.cpp.i"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuan/XSpace/Study/Interviewers/CodingTest/8/622.cpp > CMakeFiles/test8.dir/622.cpp.i
+
+8/CMakeFiles/test8.dir/622.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test8.dir/622.cpp.s"
+	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuan/XSpace/Study/Interviewers/CodingTest/8/622.cpp -o CMakeFiles/test8.dir/622.cpp.s
+
+8/CMakeFiles/test8.dir/622.cpp.o.requires:
+
+.PHONY : 8/CMakeFiles/test8.dir/622.cpp.o.requires
+
+8/CMakeFiles/test8.dir/622.cpp.o.provides: 8/CMakeFiles/test8.dir/622.cpp.o.requires
+	$(MAKE) -f 8/CMakeFiles/test8.dir/build.make 8/CMakeFiles/test8.dir/622.cpp.o.provides.build
+.PHONY : 8/CMakeFiles/test8.dir/622.cpp.o.provides
+
+8/CMakeFiles/test8.dir/622.cpp.o.provides.build: 8/CMakeFiles/test8.dir/622.cpp.o
+
+
 # Object files for target test8
 test8_OBJECTS = \
 "CMakeFiles/test8.dir/109.cpp.o" \
@@ -333,7 +381,9 @@ test8_OBJECTS = \
 "CMakeFiles/test8.dir/254.cpp.o" \
 "CMakeFiles/test8.dir/272.cpp.o" \
 "CMakeFiles/test8.dir/513.cpp.o" \
-"CMakeFiles/test8.dir/602.cpp.o"
+"CMakeFiles/test8.dir/602.cpp.o" \
+"CMakeFiles/test8.dir/603.cpp.o" \
+"CMakeFiles/test8.dir/622.cpp.o"
 
 # External object files for target test8
 test8_EXTERNAL_OBJECTS =
@@ -349,9 +399,11 @@ test8_EXTERNAL_OBJECTS =
 8/libtest8.so: 8/CMakeFiles/test8.dir/272.cpp.o
 8/libtest8.so: 8/CMakeFiles/test8.dir/513.cpp.o
 8/libtest8.so: 8/CMakeFiles/test8.dir/602.cpp.o
+8/libtest8.so: 8/CMakeFiles/test8.dir/603.cpp.o
+8/libtest8.so: 8/CMakeFiles/test8.dir/622.cpp.o
 8/libtest8.so: 8/CMakeFiles/test8.dir/build.make
 8/libtest8.so: 8/CMakeFiles/test8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuan/XSpace/Study/Interviewers/CodingTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libtest8.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuan/XSpace/Study/Interviewers/CodingTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libtest8.so"
 	cd /home/yuan/XSpace/Study/Interviewers/CodingTest/build/8 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test8.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -370,6 +422,8 @@ test8_EXTERNAL_OBJECTS =
 8/CMakeFiles/test8.dir/requires: 8/CMakeFiles/test8.dir/272.cpp.o.requires
 8/CMakeFiles/test8.dir/requires: 8/CMakeFiles/test8.dir/513.cpp.o.requires
 8/CMakeFiles/test8.dir/requires: 8/CMakeFiles/test8.dir/602.cpp.o.requires
+8/CMakeFiles/test8.dir/requires: 8/CMakeFiles/test8.dir/603.cpp.o.requires
+8/CMakeFiles/test8.dir/requires: 8/CMakeFiles/test8.dir/622.cpp.o.requires
 
 .PHONY : 8/CMakeFiles/test8.dir/requires
 

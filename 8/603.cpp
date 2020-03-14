@@ -33,11 +33,13 @@ public:
             num.push_back(nums[i]);//nums[i]加到此数组后面,当i==1或者前面没有可以整除的数字，就直接加上自身
             m[nums[i]] = num;//更新map
         }
+        
         for (auto c : m)    //获得最长的整除子集
         {
             if (c.second.size() > res.size())
                 res = c.second;
         }
+        
         return res;
     }
 };

@@ -23,3 +23,7 @@
 
 8/CMakeFiles/test8.dir/602.cpp.o: ../8/602.cpp
 
+8/CMakeFiles/test8.dir/603.cpp.o: ../8/603.cpp
+
+8/CMakeFiles/test8.dir/622.cpp.o: ../8/622.cpp
+
