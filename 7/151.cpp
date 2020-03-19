@@ -46,7 +46,7 @@ public class Solution {
 #include <algorithm>
 #include <vector>
 using namespace std;
-#define INT_MIN -999999999;
+#define INT_MIN -10000
 
 class Solution {
 public:

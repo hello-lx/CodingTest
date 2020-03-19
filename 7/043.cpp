@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+#define INT_MIN -10000
 
 class Solution {
 public:
@@ -11,7 +12,7 @@ public:
      */
     int maxSubArray(vector<int> &nums, int k) {
         // write your code here
-        vector<vector<int> > dp(nums.size()+1,vector<int>(k+1,INT_MIN));
+        vector<vector<int> > dp(nums.size()+1,vector<int>(k+1, INT_MIN));
         for(int i=0;i<nums.size();i++)
             dp[i][0] = 0;
         for(int i=1;i<=nums.size();i++)

@@ -1,5 +1,14 @@
+#include <iostream>
 #include <list>
+#include <vector>
+#include <math.h>
+#include <algorithm>
+#include <map>
 #include <unordered_map>
+#include <set>
+#include <list>
+#include <queue>
+using namespace std;
 
 class LFUCache {
 private:
@@ -7,7 +16,7 @@ private:
     unordered_map<int, pair<int, int>> cache;
     unordered_map<int, list<int>> freq;
     unordered_map<int, list<int>::iterator> iter;
-    
+
 public:
     // @param capacity, an integer
     LFUCache(int capacity) {

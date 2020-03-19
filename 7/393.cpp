@@ -38,7 +38,7 @@ class Solution {
 
 #include <vector>
 using namespace std;
-#define INT_MIN -999999999;
+#define INT_MIN -999999999
 
 class Solution {
 public:
@@ -63,7 +63,7 @@ public:
             return 0;
         if(K>=len/2) return quick(prices);
 
-        vector<int> sells(K+1, 0);
+        vector<int> sell(K+1, 0);
         vector<int> buy(K+1, INT_MIN);
         
         for(int i=0; i<len; i++)
