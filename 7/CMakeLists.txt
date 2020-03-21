@@ -33,6 +33,14 @@ add_library(
     540.cpp
     541.cpp
     544.cpp
+    545.cpp
+    548.cpp
+    551.cpp
+    575.cpp
+    577.cpp
+    601.cpp
+    612.cpp
+    617.cpp
 #     272.cpp
 #     513.cpp
 #     602.cpp

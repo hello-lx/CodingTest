@@ -11,37 +11,36 @@
 #include <stack>
 using namespace std;
 
-class TestClass{
-private:
-    int k=0;
-
-public:
-    TestClass(int v){
-        k = v;
-    }
-    
-    void setK(int v){
-    k = v;
-}
-    
-    int getK(){ return k; }
-};
-
 
 int main(int argc, char** argv){
     
-    vector<int> s{1, 2, 3};
+    string res;
     
-//     for(vector<int>iterator it: s){
-//         cout << *it << endl;
-//     }
+    cout << "res: " << res << endl;
+    stack<char> my_stack;
     
-    vector<int>::iterator i = s.begin();
+    my_stack.push('a');
+    my_stack.push('b');
+    my_stack.push('c');
     
-    for(; *i!=NULL; i+=1){
-        cout << *i << endl;
+    while(!my_stack.empty()){
+        res += my_stack.top();
+        cout << "first: " << my_stack.top() << endl;
+        my_stack.pop();
     }
+    cout << "res: " << res << endl << endl;
     
+    my_stack.push('a');
+    my_stack.push('b');
+    my_stack.push('c');
+    
+    res = "";
+    while(!my_stack.empty()){
+        res = my_stack.top() + res;
+        cout << "second: " << my_stack.top() << endl;        
+        my_stack.pop();
+    }
+    cout << "res: " << res << endl << endl;
     return 0;
 }
 
