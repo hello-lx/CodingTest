@@ -41,10 +41,17 @@ add_library(
     601.cpp
     612.cpp
     617.cpp
-#     272.cpp
-#     513.cpp
-#     602.cpp
-#     603.cpp
-#     622.cpp
+    642.cpp
+    654.cpp
+    657.cpp
+    
+#     665.cpp
+#     685.cpp
+#     793.cpp
+#     817.cpp
+#     839.cpp
+#     840.cpp
+#     931.cpp
+#     943.cpp
+#     944.cpp
 )
-
