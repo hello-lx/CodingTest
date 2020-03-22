@@ -69,11 +69,11 @@ bool insert(int val) {
         // write your code here
         if(!dict.count(val)){
             return false;
-        }         
+        }
         nums[dict[val]] = nums[nums.size()-1];  
         dict[nums[nums.size()-1]]=dict[val];
         
-        nums.pop_back();  
+        nums.pop_back();
         dict.erase(val);  
         return true;  
     }
