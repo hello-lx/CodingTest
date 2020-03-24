@@ -33,6 +33,7 @@ public:
                     dic.insert(nums[i]);
                 }else{
                     set.insert(nums[i]);
+                    // 用set去除在queue中重复的数字
                     while(!que.empty()&&set.find(que.front())!=set.end()){
                         que.pop();
                     }
@@ -54,6 +55,5 @@ public:
         }else{
             return que.empty()?-1:que.front();
         }
-
     }
 };

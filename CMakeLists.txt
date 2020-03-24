@@ -22,3 +22,4 @@ add_subdirectory( 8 )
 
 
 add_executable( t1 std.cpp )
+add_executable( t2 test2.cpp )
