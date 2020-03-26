@@ -48,7 +48,7 @@ public:
             } else {
                 end = mid;
             }
-        }    
+        }
         
         if (getGTECount(nums, start) >= k) return start;
         

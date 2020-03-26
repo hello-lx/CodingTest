@@ -2,6 +2,7 @@
 #include <algorithm>
 using namespace std;
 
+/*
 
 // Definition of Interval:
 class Interval {
@@ -12,17 +13,16 @@ class Interval {
     }
 };
 
-bool mycmp(const Interval& start, const Interval& end)
+bool mycmp(const Interval& t1, const Interval& t2)
 {
-    return start.start < end.start;
+    return t1.start < t2.start;
 }
+
 class Solution {
 public:
-    /**
-     * @param list1: one of the given list
-     * @param list2: another list
-     * @return: the new sorted list of interval
-     */
+//      * @param list1: one of the given list
+//      * @param list2: another list
+//      * @return: the new sorted list of interval
     vector<Interval> mergeTwoInterval(vector<Interval> &list1, vector<Interval> &list2) {
         // write your code here
         vector<Interval> intervals;
@@ -59,3 +59,5 @@ public:
         return ret;
     }
 };
+
+*/
