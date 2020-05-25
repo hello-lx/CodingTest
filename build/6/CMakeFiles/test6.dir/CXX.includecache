@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/015.cpp
+algorithm
+-
+vector
+-
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/016.cpp
+vector
+-
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/017.cpp
+vector
+-
+algorithm
+-
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/018.cpp
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/033.cpp
+vector
+-
+string
+-
+
+/home/yuan/XSpace/Study/Interviewers/CodingTest/6/034.cpp
+iostream
+-
+cstdlib
+-
+vector
+-
+string
+-
+algorithm
+-
+
