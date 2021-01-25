@@ -1,0 +1,7 @@
+# test
+*build/
+*.log
+*.xml
+*.pyc
+*.idea/
+*.pytest_cache/
