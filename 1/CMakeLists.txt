@@ -5,4 +5,4 @@ project( check )
 set( CMAKE_CXX_STANDARD 11 )
 
 
-add_executable( t 104.cpp )
+add_executable( m1 13.cpp )
