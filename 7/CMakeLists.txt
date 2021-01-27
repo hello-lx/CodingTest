@@ -5,4 +5,4 @@ project( check )
 set( CMAKE_CXX_STANDARD 11 )
 
 
-add_executable( m7 224.cpp )
+add_executable( m7 620.cpp )
