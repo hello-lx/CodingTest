@@ -1,5 +1,4 @@
 /*
-
 public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         // write your code here
@@ -30,3 +29,48 @@ public class Solution {
     }
 }
 */
+
+
+class Solution {
+public:
+    /**
+     * @param candidates: A list of integers
+     * @param target: An integer
+     * @return: A list of lists of integers
+     */
+    set<vector<int>> myset;
+    vector<vector<int>> combinationSum(vector<int> &nums, int target) 
+    {
+        // write your code here
+        vector<vector<int>> ret;
+        vector<int> tmp;
+        sort(nums.begin(), nums.end());
+        backtrack(ret, tmp, nums, 0,target);
+        return ret;
+    }
+    
+    void backtrack(vector<vector<int>>& ret, vector<int> &tempList, vector<int>& nums, int start,int target)
+    {
+        //ret.push_back(tempList);
+        if(target < 0)
+            return;
+        else if(target == 0)
+        {
+            if(myset.find(tempList) == myset.end())
+            {
+                myset.insert(tempList);
+                ret.push_back(tempList);
+            }
+        }
+        else
+        {
+            for(int i = start; i < nums.size(); i++)
+            {
+                tempList.push_back(nums[i]);
+                backtrack(ret, tempList, nums, i, target-nums[i]);
+                tempList.erase(tempList.begin() + tempList.size() - 1);
+            }
+        }
+        
+    }
+};
