@@ -4,21 +4,21 @@ project( CodingTest )
 
 set(CMake_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_subdirectory( 1 )
+add_executable( m1 1/13.cpp )
 
-add_subdirectory( 2 )
+add_executable( m2 2/14.cpp )
 
-add_subdirectory( 3 )
+add_executable( m3 3/5.cpp )
 
-add_subdirectory( 4 )
+add_executable( m4 4/7.cpp )
 
-add_subdirectory( 5 )
+add_executable( m5 5/66.cpp )
 
-add_subdirectory( 6 )
+add_executable( m6 6/154.cpp )
 
-add_subdirectory( 7 )
+add_executable( m7 7/620.cpp )
 
-add_subdirectory( 8 )
+add_executable( m8 8/611.cpp )
 
 
 add_executable( t1 std.cpp )
