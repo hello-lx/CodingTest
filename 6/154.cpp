@@ -29,7 +29,8 @@ public:
     {
         if (s.length() == 0){
             // s串匹配完合法的情况只有p为空，或是 "X*X*"的形式
-            if (p.length() & 1) return false;
+            if (p.length() & 1)
+             return false;
             else {
                 for (int i = 1; i < p.length(); i += 2) {
                     if (p[i] != '*') return false;
