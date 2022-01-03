@@ -16,12 +16,14 @@ int main()
     nums[3] ^= nums[0];
     nums[0] ^= nums[3];
 
-// 01
-// 10    
-    
-    for(int i=0; i<5; i++){
-        cout << nums[i] << endl;
-    }
-    
+    int i = 1 << 100 - 'a';
+    cout << i << endl;
+    cout << 99 - 'a' << endl;
+
     return 0;
 }
+
+
+
+
+
