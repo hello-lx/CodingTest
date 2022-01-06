@@ -5,3 +5,4 @@
 *.pyc
 *.idea/
 *.pytest_cache/
+*.vscode/
