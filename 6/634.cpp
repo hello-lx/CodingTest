@@ -38,32 +38,42 @@ public:
         return result;
     }
 
-    bool check(int cur, string str) {
-        for(int i = cur + 1; i < num; ++i) {
+    bool check(int cur, string str) 
+    {
+        for(int i = cur + 1; i < num; ++i) 
+        {
             string pre="";
-            for(int j = 0; j < cur; ++j) {
-                pre += storage[j][i];
+            for(int j = 0; j < cur; ++j)
+            {
+                pre += storage[j][i];  // storage存储已选择的字符串  vector<string>
             }
+
             pre += str[i];
-            if(prefix[pre].size() == 0) {
+            // prefix存储前缀对应的字符串  map<string, vector<string>>
+            if(prefix[pre].size() == 0)   
+            {
                 return false;
             }
         }
         return true;
     }
 
-    void dfs(int cur) {
+    void dfs(int cur) 
+    {
         if(cur == num) {
             result.push_back(storage);
             return ;
         }
         string pre="";
-        //剪枝
-        for(auto str: storage) {
+        //剪枝   storage存储已选择的字符串  vector<string>
+        for(auto str: storage)    
+        {
             pre += str[cur];
         }
-        for(auto str: prefix[pre]) {
-            if(!check(cur, str)) {
+        for(auto str: prefix[pre])
+        {
+            if(!check(cur, str)) 
+            {
                 continue;
             } 
             storage.push_back(str);
