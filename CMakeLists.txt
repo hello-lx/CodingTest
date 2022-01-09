@@ -14,7 +14,7 @@ add_executable( m4 4/7.cpp )
 
 add_executable( m5 5/66.cpp )
 
-add_executable( m6 6/154.cpp )
+add_executable( m6 6/582.cpp )
 
 add_executable( m7 7/620.cpp )
 

@@ -6,6 +6,11 @@
  * 5.注意dfs出口和words的判空。
  */
 
+#include <vector>
+#include <iostream>
+#include <map>
+using namespace std;
+
 class Solution {
 public:
     /*
@@ -33,6 +38,18 @@ public:
             }
         }
 
+/*
+        for(auto p: prefix)
+        {
+            cout << "'" << p.first << "': ";
+            for(int i=0; i<p.second.size(); i++)
+            {
+                cout << p.second[i] << ", ";
+            }
+            cout << endl;
+        }
+*/
+
         num=words[0].size();
         dfs(0);
         return result;
@@ -50,23 +67,25 @@ public:
 
             pre += str[i];
             // prefix存储前缀对应的字符串  map<string, vector<string>>
-            if(prefix[pre].size() == 0)   
+            if(prefix[pre].size() == 0)
             {
                 return false;
             }
         }
+
         return true;
     }
 
-    void dfs(int cur) 
+    void dfs(int cur)
     {
-        if(cur == num) {
+        if(cur == num) 
+        {
             result.push_back(storage);
             return ;
         }
         string pre="";
-        //剪枝   storage存储已选择的字符串  vector<string>
-        for(auto str: storage)    
+        //剪枝   storage存储已选择的字符串  vector<string>  
+        for(auto str: storage)
         {
             pre += str[cur];
         }
@@ -82,3 +101,11 @@ public:
         }
     }
 };
+
+
+int main()
+{
+    Solution solution;    
+    vector<string> testStrs = {"area","lead","wall","lady","ball"};
+    solution.wordSquares(testStrs);
+}
