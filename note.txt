@@ -2,3 +2,10 @@
 lintcode: https://www.lintcode.com/problem/634/
 
 leetcode: https://leetcode-cn.com/
+
+
+
+
+Tree alg: Tree 、Random Forest 、 XGboost
+
+cluser Alg(No Label):  KMeans 、 DBSCN(normal detect) 、Birch (big model、quick)
