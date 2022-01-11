@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <map>
 #include <unordered_map>
+#include <unordered_set>
 #include <set>
 #include <list>
 #include <queue>
@@ -13,7 +14,13 @@ using namespace std;
 
 
 int main(int argc, char** argv){
-    
+
+    vector<string> keypad({"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"});
+    char *d = "8";
+    // cout << *d - '2' << endl;
+    cout << *d << endl;
+
+/*
     string res;
     
     cout << "res: " << res << endl;
@@ -41,6 +48,8 @@ int main(int argc, char** argv){
         my_stack.pop();
     }
     cout << "res: " << res << endl << endl;
+*/
+
     return 0;
 }
 
