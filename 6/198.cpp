@@ -13,6 +13,15 @@
 using namespace std;
 
 
+/**
+ * 1、先给数组去重
+ * 2、用mapCount保存每个重复的值
+ * 3、用memrization保存每个需要计算位置的返回值
+ * 
+ * [1,4,2,2]  --->  3
+ * [1,6,5,3,1] -->  24
+ */ 
+
 class Solution {
 public:
     long long permutationIndexII(vector<int> &A) {
@@ -50,17 +59,13 @@ public:
     }
     
     long long myDFS (unordered_map<int, int> &mapCount) {
-        
         if (mapCount.size() == 1) {
             return 1;
         }
         
-        long long ret = 0;
-        
+        long long ret = 0;        
         unordered_map<int, int>::iterator it;
-        
-        vector<int> temp;
-        
+        vector<int> temp;        
         double hash = 0;
 
         for (it = mapCount.begin(); it != mapCount.end(); ++it) {
