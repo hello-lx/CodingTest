@@ -3,7 +3,7 @@ lintcode: https://www.lintcode.com/problem/634/
 
 leetcode: https://leetcode-cn.com/
 
-
+git clone git@github.com:hello-lx/CodingTest.git
 
 
 Tree alg: Tree 、Random Forest 、 XGboost
