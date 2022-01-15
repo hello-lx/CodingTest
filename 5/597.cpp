@@ -41,7 +41,8 @@ public:
         auto r = dfs(root->right);
         int num = l.second + r.second + 1;
         double average = ((double)root->val + (l.first * l.second) + (r.first * r.second)) / num;
-        if (average > maxAve) {
+        if (average > maxAve) 
+        {
             maxAve = average;
             ans = root;
         }

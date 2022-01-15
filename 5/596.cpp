@@ -28,29 +28,28 @@ public:
 
 class Solution {
 public:
-    int dfs(TreeNode * root, pair<int, TreeNode *>& res)
-    {
-        if (!root)
-            return 0;
+        int dfs(TreeNode * root, pair<int, TreeNode *>& res){
+            if (!root)
+                return 0;
 
-        int leftVal  = dfs(root->left, res);
-        int rightVal = dfs(root->right, res);
-        
-        int sum = leftVal + rightVal + root->val;
-        if (sum < res.first)
-        {
-            res.first = sum;
-            res.second = root;
+            int leftVal  = dfs(root->left, res);
+            int rightVal = dfs(root->right, res);
+            
+            int sum = leftVal + rightVal + root->val;
+            if (sum < res.first)
+            {
+                res.first = sum;
+                res.second = root;
+            }
+
+            return sum;
         }
-
-        return sum;
-    }
-    
-    TreeNode * findSubtree(TreeNode * root) {
-        if (!root)
-            return nullptr;
-        pair<int, TreeNode *> res(0x3f3f3f3f, nullptr);
-        dfs(root, res);
-        return res.second;
-    }
+        
+        TreeNode * findSubtree(TreeNode * root) {
+            if (!root)
+                return nullptr;
+            pair<int, TreeNode *> res(0x3f3f3f3f, nullptr);
+            dfs(root, res);
+            return res.second;
+        }
 };
