@@ -26,4 +26,32 @@ public:
 };
 
 
+class Solution {
+public:
+    /**
+     * @param root: the root of the binary tree
+     * @return: all root-to-leaf paths
+     */
 
+    vector<string> binaryTreePaths(TreeNode * root) {
+        if (root == NULL) {
+            return vector<string>();
+        }
+        if (root->left == NULL && root->right == NULL) {
+            string x = to_string(root->val);
+            return vector<string>{x};
+        }
+        
+        vector<string> left = binaryTreePaths(root->left);
+        vector<string> right = binaryTreePaths(root->right);
+        
+        vector<string> ret;
+        for (auto& s : left) {
+            ret.push_back(to_string(root->val) + "->" + s);
+        }
+        for (auto& s : right) {
+            ret.push_back(to_string(root->val) + "->" + s);
+        }
+        return ret;    
+    }
+};
