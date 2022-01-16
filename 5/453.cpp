@@ -25,5 +25,34 @@ public:
     }
 };
 
+/*  前序遍历-非递归（用Stack）实现，入栈顺序（根->右->左）  */
 
+class Solution {
+public:
+    /**
+     * @param root: a TreeNode, the root of the binary tree
+     * @return: nothing
+     */
+    void flatten(TreeNode * root) {
+        // write your code here
+        if (!root) return;
 
+        stack<TreeNode*> s;
+
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode *current = s.top();
+            s.pop();
+
+            if (current->right) s.push(current->right);
+            if (current->left) s.push(current->left);
+
+            current->left = nullptr;
+            if (!s.empty()) {
+                current->right = s.top();
+            } else {
+                current->right = nullptr;
+            }
+        }
+    }
+};
