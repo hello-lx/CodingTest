@@ -13,6 +13,7 @@
 using namespace std;
 
 #define INT_MIN -99999999999
+#define INT_MAX 99999999999
 
 class TreeNode {
 public:
@@ -26,4 +27,37 @@ public:
 };
 
 
+class Solution {
+public:
+    /**
+     * @param root: The root of binary tree
+     * @return: An integer
+     */
 
+    void dfs(TreeNode *root, int &depth, int high)
+    {
+        if(!root) return;
+
+        dfs(root->left, depth, high+1);
+        dfs(root->right, depth, high+1);
+
+        if(!root->left && !root->right)
+        {
+            if(high < depth)
+            {
+                depth = high;
+            }
+        }
+    }
+
+    int minDepth(TreeNode * root) {
+        // write your code here
+
+        if(!root)   return 0;
+
+        int depth=INT_MAX, high=1;
+        dfs(root, depth, high);
+
+        return depth;
+    }
+};
