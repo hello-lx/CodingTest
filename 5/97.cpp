@@ -13,7 +13,6 @@
 using namespace std;
 
 #define INT_MIN -99999999999
-#define INT_MAX 99999999999
 
 class TreeNode {
 public:
@@ -30,26 +29,33 @@ public:
 class Solution {
 public:
     /**
-     * @param root: A Tree
-     * @return: Postorder in ArrayList which contains node values.
+     * @param root: The root of binary tree.
+     * @return: An integer
      */
 
-    void dfs(TreeNode *root){
+    void dfs(TreeNode *root, int &depth, int high)
+    {
         if(!root) return;
 
-        dfs(root->left);
-        dfs(root->right);
-        
-        data.push_back(root->val);
+        dfs(root->left, depth, high+1);
+        dfs(root->right, depth, high+1);
+
+        if(!root->left && !root->right)
+        {
+            if(high > depth)
+            {
+                depth = high;
+            }
+        }
     }
 
-    vector<int> postorderTraversal(TreeNode * root) {
+    int maxDepth(TreeNode * root) {
         // write your code here
-        dfs(root);
+        if(!root)   return 0;
 
-        return data;
+        int depth=INT_MIN, high=1;
+        dfs(root, depth, high);
+
+        return depth;
     }
-
-private:
-    vector<int> data;
 };
