@@ -15,40 +15,19 @@ using namespace std;
 
 int main(int argc, char** argv){
 
-    vector<string> keypad({"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"});
-    char *d = "8";
-    // cout << *d - '2' << endl;
-    cout << *d << endl;
+    // vector<string> keypad({"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"});
+    // char *d = "8";
+    // cout << *d << endl;
 
-/*
-    string res;
-    
-    cout << "res: " << res << endl;
-    stack<char> my_stack;
-    
-    my_stack.push('a');
-    my_stack.push('b');
-    my_stack.push('c');
-    
-    while(!my_stack.empty()){
-        res += my_stack.top();
-        cout << "first: " << my_stack.top() << endl;
-        my_stack.pop();
+    vector<int> s = {1, 2, 3};
+    string str;
+    for(int i=0; i<s.size(); i++)
+    {
+        str.push_back('0' + s[i]);
+        // str.push_back(s[i]);
     }
-    cout << "res: " << res << endl << endl;
-    
-    my_stack.push('a');
-    my_stack.push('b');
-    my_stack.push('c');
-    
-    res = "";
-    while(!my_stack.empty()){
-        res = my_stack.top() + res;
-        cout << "second: " << my_stack.top() << endl;        
-        my_stack.pop();
-    }
-    cout << "res: " << res << endl << endl;
-*/
+
+    cout << str << endl;
 
     return 0;
 }

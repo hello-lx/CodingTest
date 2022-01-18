@@ -34,7 +34,8 @@ private:
     }
     
 public:
-    int minMoveStep(vector<vector<int>> &init_state, vector<vector<int>> &final_state) {
+    int minMoveStep(vector<vector<int>> &init_state, vector<vector<int>> &final_state) 
+    {
         string init_str = get_str(init_state);
         string final_str = get_str(final_state);
         if (init_str.compare(final_str) == 0)
