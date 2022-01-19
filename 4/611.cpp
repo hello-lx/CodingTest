@@ -17,15 +17,13 @@ using namespace std;
 
 
 
-/**
- * Definition for a point.
- * struct Point {
- *     int x;
- *     int y;
- *     Point() : x(0), y(0) {}
- *     Point(int a, int b) : x(a), y(b) {}
- * };
- */
+// Definition for a point.
+struct Point {
+    int x;
+    int y;
+    Point() : x(0), y(0) {}
+    Point(int a, int b) : x(a), y(b) {}
+};
 
 class Solution {
 public:
@@ -35,6 +33,7 @@ public:
      * @param destination: a point
      * @return: the shortest path 
      */
+
 int shortestPath(vector<vector<bool>> &grid, Point &source, Point &destination) {
         // write your code here
         queue<pair<int, int>> q1, q2;
@@ -48,18 +47,23 @@ int shortestPath(vector<vector<bool>> &grid, Point &source, Point &destination) 
         
         vector<vector<int>> dirs = {{1,2},{1,-2},{-1,2},{-1,-2},{2,1},{2,-1},{-2,-1},{-2,1}};
         int step = 0;
-        while (q1.size() || q2.size()) {
+        while (q1.size() || q2.size()) 
+        {
             int size1 = q1.size();
-            for (int i = 0; i < size1; i++) {
-                pair<int, int> cur = q1.front(); q1.pop();
-                if (visited2[cur.first][cur.second]) return step;
-                for (vector<int> dir : dirs) {
+            for (int i = 0; i < size1; i++)
+            {
+                pair<int, int> cur = q1.front(); 
+                q1.pop();
+                if (visited2[cur.first][cur.second])
+                    return step;
+                for (vector<int> dir: dirs)
+                {
                     int x = cur.first + dir[0];
                     int y = cur.second + dir[1];
-                    if (x < 0 || y < 0 || x >= grid.size() || y >= grid[0].size() || grid[x][y] || visited1[x][y]) continue;
+                    if (x < 0 || y < 0 || x >= grid.size() || y >= grid[0].size() || grid[x][y] || visited1[x][y]) 
+                        continue;
                     visited1[x][y] = 1;
                     q1.push({x,y});
-                    
                 }
             }
             step++;

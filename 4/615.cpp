@@ -32,6 +32,8 @@ public:
      * @param prerequisites: a list of prerequisite pairs
      * @return: true if can finish all courses or false
      */
+
+    // prerequisites: 比如要学习课程 0 你需要先学习课程 1 ，表示为[0,1]
     bool canFinish(int numCourses, vector<pair<int, int>> &prerequisites) {
         // write your code here
         vector<vector<int>> course_prerequisites(numCourses);
