@@ -25,14 +25,17 @@ public:
      * @param seqs: a list of sequences
      * @return: true if it can be reconstructed only one or false
      */
-    bool sequenceReconstruction(vector<int> &org, vector<vector<int>> &seqs) {
+    bool sequenceReconstruction(vector<int> &org, vector<vector<int>> &seqs) 
+    {
         unordered_map<int, unordered_set<int>> g;
         unordered_map<int, int> indegree;
         queue<int> Q;
         vector<int> tp;
 
-        for (auto& s : seqs){
-            for (int i = 0; i < s.size(); ++i) {
+        for (auto& s : seqs)
+        {
+            for (int i = 0; i < s.size(); ++i) 
+            {
                 g[s[i]];
                 if (i + 1 < s.size()){
                     if (g[s[i]].count(s[i+1]) == 0)
@@ -48,7 +51,8 @@ public:
         if (g.size() == 0 && org.size() == 0)
             return true;
 
-        for (auto p : g){
+        for (auto p : g)
+        {
             if (indegree[p.first] == 0) {
                 Q.push(p.first);
                 tp.push_back(p.first);
