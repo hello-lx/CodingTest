@@ -58,6 +58,7 @@ public:
                 }
             }
         }
+        
         int day = 1;
         while (!Q.empty()) {
             int l = Q.size();
