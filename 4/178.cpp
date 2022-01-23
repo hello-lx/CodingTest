@@ -29,7 +29,7 @@ public:
     {
         if (p[x] != x) 
             p[x] = find(p[x]);
-            
+
         return p[x];
     }
 
@@ -37,16 +37,12 @@ public:
         if (edges.empty())
             return n == 1? true:false;
         for (int i = 0; i< n; i++)
-        {
             p[i] = i;
-        }
 
         for (auto node : edges)
         {
             if (find(node[0]) == find(node[1]))
-            {
                 return false;
-            }
 
             p[find(node[0])] = find(node[1]);
 
