@@ -31,45 +31,38 @@ public:
      */
     vector<DirectedGraphNode*> topSort(vector<DirectedGraphNode*> graph) {
         // write your code here
-        vector<DirectedGraphNode*> order;
-
-        if (graph.empty()) return order;
-
-        unordered_map<DirectedGraphNode*, int> indegrees = compute_indegree(graph);
-
-        queue<DirectedGraphNode*> q;
-        for (auto node : indegrees) {
-            if (node.second == 0) {
-                q.push(node.first);
-            }
-        }
-
-        while (!q.empty()) {
-            DirectedGraphNode *current = q.front();
-            q.pop();
-            order.push_back(current);
-
-            for (auto neighbor : current->neighbors) {
-                if (--indegrees[neighbor] == 0) {
-                    q.push(neighbor);
-                }
-            }
-        }
-
-        return order;
-    }
-
-    unordered_map<DirectedGraphNode*, int> compute_indegree(vector<DirectedGraphNode*> graph) {
+        if(graph.empty()) return graph;
+        
         unordered_map<DirectedGraphNode*, int> indegrees;
+        for(auto g: graph)
+        {
+            if(!indegrees.count(g))
+                indegrees[g] = 0;
+            for(auto n: g->neighbors)
+                indegrees[n]++;
+        }
 
-        for (auto node : graph) {
-            if (!indegrees.count(node)) indegrees[node] = 0;
+        queue<DirectedGraphNode*> Q;
+        for(auto node: indegrees)
+        {
+            if(node.second == 0)
+                Q.push(node.first);
+        }
 
-            for (auto neighbor : node->neighbors) {
-                indegrees[neighbor]++;
+        vector<DirectedGraphNode*> res;
+        while(!Q.empty())
+        {
+            DirectedGraphNode* cur = Q.front();
+            Q.pop();
+            res.push_back(cur);
+            
+            for(auto n: cur->neighbors)
+            {
+                if(--indegrees[n] == 0)
+                    Q.push(n);
             }
         }
 
-        return indegrees;
+        return res;
     }
 };
