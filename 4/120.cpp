@@ -42,7 +42,7 @@ public:
                     for(char c = 'a'; c <= 'z'; c++)
                     {
                         // if(c == oldchar)
-                        //     continue;
+                        //     continue;    
                         word[i] = c;
                         if (word == end)
                             return length;

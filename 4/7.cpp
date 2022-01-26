@@ -12,6 +12,8 @@
 #include <stack>
 using namespace std;
 
+#define INT_MIN -99999999999
+#define INT_MAX 99999999999
 
 class TreeNode {
 public:
