@@ -8,7 +8,7 @@ add_executable( m1 1/13.cpp )
 
 add_executable( m2 2/14.cpp )
 
-add_executable( m3 3/5.cpp )
+add_executable( m3 3/587.cpp )
 
 add_executable( m4 4/178.cpp )
 
