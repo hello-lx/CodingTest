@@ -26,9 +26,11 @@ public:
     int twoSumClosest(vector<int> &nums, int target) {
         // write your code here
         if(nums.size()<2) return -1;
+
         sort(nums.begin(), nums.end());
         int diff=INT_MAX;
         int left=0, right=nums.size()-1;
+
         while(left<right)
         {
             int sum=nums[left]+nums[right];
@@ -36,12 +38,12 @@ public:
                 return 0;
             else if(sum>target)
             {
-                diff=min(diff,abs(target-sum));
+                diff = min(diff,abs(target-sum));
                 right--;
             }
             else
             {
-                diff=min(diff,abs(target-sum));
+                diff = min(diff,abs(target-sum));
                 left++;
             }  
         }
