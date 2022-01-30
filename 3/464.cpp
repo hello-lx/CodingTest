@@ -117,7 +117,7 @@ public:
 				First += 2 * k;
 			}
 			//当剩下的没有合并处理过的元素数量不足2k，即无法构成两个子序列进行合并操作时，要分类处理
-		   //1.剩下小于等于一个子序列的元素个数
+		    //1.剩下小于等于一个子序列的元素个数
 			if (last - First <= k)
 			{
 				mid = First + (last - First) / 2;
@@ -126,7 +126,7 @@ public:
 			//2.剩下大于一个小于两个的子序列元素个数
 			else
 			{
-				mid = First + k - 1;;
+				mid = First + k - 1;
 				merge(A, First, mid, last, temp);
 			}
 			k *= 2;
