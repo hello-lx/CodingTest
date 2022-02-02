@@ -15,16 +15,6 @@ using namespace std;
 #define INT_MIN -99999999999
 #define INT_MAX 99999999999
 
-class ListNode {
-public:
-    int val;
-    ListNode *next;
-    ListNode(int val) {
-       this->val = val;
-       this->next = NULL;
-    }
-};
-
 class Solution {
 public:
     /**
