@@ -21,10 +21,12 @@ int main(int argc, char** argv){
 
     vector<int> s = {1, 2, 3};
     string str;
+    int n = 1;
     for(int i=0; i<s.size(); i++)
     {
-        str.push_back('0' + s[i]);
-        // str.push_back(s[i]);
+        // str.push_back('0' + s[i]);
+        n <<= 1;
+        cout << n << endl;
     }
 
     cout << str << endl;

@@ -23,7 +23,8 @@ public:
      * @param k: An integer
      * @return: an integer
      */
-    int copyBooks(vector<int> &pages, int k) {
+    int copyBooks(vector<int> &pages, int k) 
+    {
         if(pages.size() == 0)
             return 0;
         if(k == 0)
@@ -36,12 +37,13 @@ public:
             max_page = max(pages[i], max_page);
         }
         int left = max_page;
-        int right = accumulate(pages.begin(),pages.end(),0);
+        int right = accumulate(pages.begin(), pages.end(), 0);
         int mid;
         while(left + 1 < right)
         {
             mid = (int)((left + right) / 2);
-            if(check(pages,mid) <= k)//如果返回的人数小于指定的人数 说明时间还可以更短
+            // 如果返回的人数小于指定的人数 说明时间还可以更短
+            if(check(pages, mid) <= k)
             {
                 right = mid;
             }
@@ -52,8 +54,8 @@ public:
         }
         if(check(pages,left) <= k)
             return left;
-        return right;
         
+        return right;        
     }
     int check(vector<int> &pages, int mid)//返回需要的人数
     {
