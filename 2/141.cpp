@@ -23,12 +23,12 @@ public:
      */
     int sqrt(int x) {
         // write your code here
-        double left=0,right=10000000000;
-        while(right-left>1e-3){
-            double mid=(left+right)/2;
-            if(mid*mid>x)right=mid;
-            else left=mid;
+        double l = 0, r = 1e10;
+        while(r - l > 1e-3){
+            double mid = (l + r) / 2;
+            if(mid*mid > x) r = mid;
+            else l = mid;
         }
-        return int(right);
+        return int(r);
     }
 };
