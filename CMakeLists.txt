@@ -4,7 +4,7 @@ project( CodingTest )
 
 set(CMake_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_executable( m1 1/13.cpp )
+add_executable( m1 1/594.cpp )
 
 add_executable( m2 2/14.cpp )
 

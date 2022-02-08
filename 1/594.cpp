@@ -49,11 +49,23 @@ public:
             ++len;
             ++p;
          }
+
+         cout << "lps: ";
+         for(int i=0; i<lps.size(); i++)
+            cout << lps[i] << ", ";
+         cout << endl;
+
          for(l=1;l<len-1;++l){
             auto prev=lps[l];
-            if(prev>0&& target[l+1]==target[prev])
+            if(prev>0 && target[l+1]==target[prev])
                lps[l]=lps[prev-1];
          }
+
+         cout << "lps2: ";
+         for(int i=0; i<lps.size(); i++)
+            cout << lps[i] << ", ";
+         cout << endl;
+
          for(l=0,p=source;l<len&&*p;++p){
             if(target[l]==*p){
                 ++l;
@@ -67,8 +79,15 @@ public:
                     }
                 }
             }
-
         }
         return l>=len?p-source-len:-1;
     }
 };
+
+int main()
+{
+   char *source = "abcccbbcccbdef", *target = "bcbcb";
+   Solution s;
+   s.strStr2(source, target);
+   return 0;
+}
