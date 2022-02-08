@@ -17,35 +17,58 @@ using namespace std;
 
 
 /*
-
-字符串Hash可以通俗的理解为，把一个字符串转换为一个整数。
-
-如果我们通过某种方法，将字符串转换为一个整数，就可以快速的判断两个字符串是否相同。
-
-当然如果有不同的两个字符串同时Hash到一个整数，这样就比较麻烦了，所以我们希望构造这个Hash函数使得他们成为一个单射。
-
-算法思路
-给定一个字符串S,对于一个字符c我们规定id(c)=c-'a'+1
-
-hash[i]=(hash[i-1]*p+id(s[i]))%MOD
-
-p和MOD均为质数，并且要尽量大
-
-代码思路
-计算target的hash值
-
-计算source的hash值的过程中，依次计算每targetLen位的hash值。
-
-   > 假设target长度为2，source为“abcd”
-
-   >
-
-   > hash("cd") = (hash("bc + d") - hash("b")*2 ) % BASE
-
-复杂度分析
-N表示字符串source长度，M表示字符串target长度
-
-空间复杂度：O(1)
-
-时间复杂度：O(N+M)
+   KMP
 */
+
+
+class Solution {
+public:
+    /*
+     * @param source: A source string
+     * @param target: A target string
+     * @return: An integer as index
+     */
+      int strStr2(const char* source, const char* target) {
+         // write your code here
+         if(!source||!target)
+            return -1;
+         if(!*target)
+            return 0;
+         std::vector<int> lps(1,0);
+         const char* p=target+1;
+         int len=1,l=0;
+         while(*p){
+            if(*p==target[l]){
+                ++l;
+            }
+            else if(l){
+                l=lps[l-1];
+                continue;
+            }
+            lps.push_back(l);
+            ++len;
+            ++p;
+         }
+         for(l=1;l<len-1;++l){
+            auto prev=lps[l];
+            if(prev>0&& target[l+1]==target[prev])
+               lps[l]=lps[prev-1];
+         }
+         for(l=0,p=source;l<len&&*p;++p){
+            if(target[l]==*p){
+                ++l;
+            }
+            else{
+                while(l){
+                    l=lps[l-1];
+                    if(target[l]==*p){
+                        ++l;
+                        break;
+                    }
+                }
+            }
+
+        }
+        return l>=len?p-source-len:-1;
+    }
+};
