@@ -16,34 +16,38 @@ using namespace std;
 #define INT_MAX 99999999999
 
 
-
 class Solution {
 public:
     /**
-     * @param s: A string
-     * @return: Whether the string is a valid palindrome
+     * @param s: input string
+     * @return: a string as the longest palindromic substring
      */
-    bool isPalindrome(string &s) {
+    string longestPalindrome(string &s) {
         // write your code here
-        int start = 0;
-        int end = s.size() - 1;
-        while(start < end)
+        if(s.empty()) return "";
+
+        int len = s.length();
+        bool is_palindrome[len][len] = {false};
+        is_palindrome[0][0] = true;
+        for(int i=0; i<len; i++)
         {
-            while(!isalnum(s[end]) && end >=0)
-            {
-                end--;
-            }
-            while(!isalnum(s[start]) && start < s.size())
-            {
-                start++;
-            }
-            if(tolower(s[start]) == tolower(s[end]))
-            {
-                start++;
-                end--;
-            }
-            else return false;
+            is_palindrome[i][i] = true;
+            is_palindrome[i][i-1] = true;
         }
-        return true;
+
+        int start = 0, longest = 1;
+        for(int length=2; length <= len; length++){
+            for(int i=0; i<=len-length; i++){
+                int j=i+length-1;
+                is_palindrome[i][j] = is_palindrome[i+1][j-1] && s[i] == s[j];
+
+                if(is_palindrome[i][j] && length > longest){
+                    start = i;
+                    longest = length;
+                }
+            }
+        }
+
+        return s.substr(start, longest);
     }
 };
