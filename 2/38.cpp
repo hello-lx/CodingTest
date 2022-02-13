@@ -24,23 +24,19 @@ public:
      */
     int searchMatrix(vector<vector<int>> &matrix, int target) {
         // write your code here
-        unsigned int cnt=0;//因为size()函数返回的都是unsigned值，所以用unsigned比较好，当然不用也可以啦~
-        unsigned int col = matrix[0].size();
-        unsigned int row = matrix.size();
-        int i = row-1;
-        int j = 0;
-        while(i >= 0 and j < col) {
-            if(matrix[i][j] == target) {
+        unsigned int cnt=0, cols=matrix[0].size(), rows=matrix.size();
+        int row=rows-1, col=0;
+        while(row >= 0 and col < cols)
+        {
+            if(matrix[row][col] == target)
+            {
                 cnt++;
-                j++;
+                col++;
             }
-            if(matrix[i][j] < target) {
-                j++;
-            }
-            else {
-                i--;
-            }
+            if(matrix[row][col] < target) col++;
+            else row--;
         }
+        
         return cnt;
     }
 };
