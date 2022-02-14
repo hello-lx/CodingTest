@@ -33,4 +33,3 @@ public:
         return n%2 ? ((long long)(a%b)*(product%b))%b : product%b;
     }
 };
-
