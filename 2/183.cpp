@@ -49,7 +49,8 @@ public:
         return totalNum >= k;
     }
     
-    int getMaxLen(vector<int> &L) {
+    int getMaxLen(vector<int> &L) 
+    {
         int maxLen = INT_MIN;
         for (int len : L) {
             maxLen = max(maxLen, len);
