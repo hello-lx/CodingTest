@@ -19,17 +19,11 @@ int main(int argc, char** argv){
     // char *d = "8";
     // cout << *d << endl;
 
-    vector<int> s = {1, 2, 3};
-    string str;
-    int n = 1;
-    for(int i=0; i<s.size(); i++)
-    {
-        // str.push_back('0' + s[i]);
-        n <<= 1;
-        cout << n << endl;
-    }
+    vector<int> A = {1, 3, 5};
+    int target = 4;
+    int pos = lower_bound(A.begin(), A.end(), target) - A.begin();
 
-    cout << str << endl;
+    std::cout << pos << std::endl;
 
     return 0;
 }
