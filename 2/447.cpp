@@ -29,7 +29,8 @@ public:
 
         int low = index/2, high = index;
 
-        while (low + 1 < high) {
+        while (low + 1 < high) 
+        {
             int mid = low + (high-low)/2;
 
             if(reader->get(mid) < target) {
