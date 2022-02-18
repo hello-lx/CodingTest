@@ -52,7 +52,8 @@ public:
             y_min = min(y_min, y);
             y_max = max(y_max, y);
 
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 4; i++) 
+            {
                 int x_ = x + dx[i];
                 int y_ = y + dy[i];
                 if (x_ < 0 || x_ >= n || y_ < 0 || y_ >= m || image[x_][y_] == '0')

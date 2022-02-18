@@ -70,7 +70,8 @@ public:
             rightSum += nums[i] - avg;
         }
 
-        for (int i = k; i <= nums.size(); i++) {
+        for (int i = k; i <= nums.size(); i++) 
+        {
             if (rightSum - minLeftSum >= 0) {
                 return true;
             }
