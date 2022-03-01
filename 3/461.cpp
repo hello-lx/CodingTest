@@ -54,11 +54,13 @@ public:
         // 数组从0开始标号，要传k - 1
         return partition(nums, 0, n - 1, k - 1);
     }
+
     int partition(vector<int>& nums, int start, int end, int k) {
         int left = start, right = end;
         int pivot = nums[left];
         
-        while (left <= right) {
+        while (left <= right) 
+        {
             while (left <= right and nums[left] < pivot) {
                 left++;
             }
